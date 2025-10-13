@@ -1,0 +1,77 @@
+/* Container */
+.main-container {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #127bb0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar from right */
+.sidebar-right {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: #0f5d82;
+  color: white;
+  padding-top: 80px;
+  transition: right 0.4s ease;
+  z-index: 5;
+}
+
+.sidebar-right.open {
+  right: 0;
+}
+
+.sidebar-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-right ul li {
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar-right ul li:hover {
+  background-color: #0c4a66;
+}
+
+/* Content slides left */
+.content {
+  transition: transform 0.4s ease;
+  padding: 100px 20px 20px 20px;
+}
+
+.content.shift-left {
+  transform: translateX(-250px); /* moves left */
+}
