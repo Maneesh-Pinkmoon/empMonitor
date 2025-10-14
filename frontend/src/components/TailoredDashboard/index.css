@@ -1,0 +1,359 @@
+.tailored-dash {
+  text-align: center;
+  background-color: #f8fbfd;
+  font-family: Comfortaa;
+}
+h1{
+    font-family: Comfortaa;
+}
+p{
+    font-family: Comfortaa;
+}
+.tailored-head {
+  color: #0d2b4c;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: Comfortaa;
+}
+
+.tail-header h2 {
+  font-size: 20px;
+  color: #1e293b;
+}
+
+.tail-header p {
+  color: #475569;
+  max-width: 600px;
+  margin: 10px auto 40px auto;
+  font-family: Comfortaa;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #eaf4fc;
+  border-radius: 12px;
+  padding: 28px 24px 60px;
+  text-align: left;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card-id {
+  font-weight: 600;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.card-icon {
+  margin: 16px 0;
+}
+
+.icon {
+  background-color: #0d2b4c;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-size: 24px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.card-desc {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Hover Button */
+.try-btn {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(to right, #26a0da, #0a59b0);
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+/* Show button on hover (desktop only) */
+.card:hover .try-btn {
+  display: block;
+}
+
+/* Optional: hide on small devices */
+@media (max-width: 768px) {
+  .try-btn {
+    display: none !important;
+  }
+}
+.homepage-root {
+  background: #101E3E;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 36px 0;
+}
+
+.homepage-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.homepage-scan-btn {
+  display: inline-block;
+  background: #22305b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 30px;
+  font-size: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.homepage-header h1 {
+  margin: 10px 0 4px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.homepage-blue-accent {
+  color: #47c2ff;
+}
+
+.homepage-subtext {
+  margin-top: 10px;
+  color: #d1e7ff;
+  font-size: 1rem;
+}
+
+.homepage-cards {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.homepage-card {
+  background: rgba(33, 44, 78, 0.9);
+  border: 2px solid #526187;
+  border-radius: 12px;
+  width: 250px;
+  min-height: 180px;
+  text-align: center;
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+  position: relative;
+}
+
+.homepage-card:hover {
+  box-shadow: 0 2px 18px rgba(70, 194, 255, 0.17);
+  border-color: #47c2ff;
+}
+
+.homepage-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  color: #47c2ff;
+}
+
+.homepage-card-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Flip Card Extension Styles */
+.flip-card {
+  background: transparent;
+  width: 250px;
+  min-height: 180px;
+  perspective: 1000px;
+  margin: 0 16px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(.45,.04,.55,.95);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and back styles */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  min-height: 180px;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: rgba(33, 44, 78, 0.9);
+  color: #fff;
+  border: 2px solid #526187;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  background: #22305b;
+  color: #d1e7ff;
+  transform: rotateY(180deg);
+}
+.flip-card-desc {
+  font-size: 0.99rem;
+  padding: 0 14px;
+}
+
+@media (max-width: 900px) {
+  .homepage-cards {
+    gap: 18px;
+  }
+  .homepage-card {
+    width: 190px;
+    min-height: 150px;
+    padding: 20px 10px;
+  }
+  .flip-card {
+    width: 190px;
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .homepage-header h1 {
+    font-size: 1.4rem;
+  }
+  .homepage-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .homepage-card {
+    width: 90%;
+    min-width: 230px;
+  }
+  .flip-card {
+    width: 90%;
+    min-width: 230px;
+  }
+}
+.flip-card {
+  background: transparent;
+  width: 250px;
+  min-height: 180px;
+  perspective: 1000px;
+  margin: 0 16px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 180px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(.45,.04,.55,.95);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  min-height: 180px;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: rgba(33, 44, 78, 0.9);
+  color: #fff;
+  border: 2px solid #526187;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-back {
+  background: #22305b;
+  color: #d1e7ff;
+  transform: rotateY(180deg);
+}
+.flip-card-desc {
+  font-size: 0.99rem;
+  padding: 0 14px;
+}
+
+@media (max-width: 900px) {
+  .homepage-cards {
+    gap: 18px;
+  }
+  .homepage-card {
+    width: 190px;
+    min-height: 150px;
+    padding: 20px 10px;
+  }
+  .flip-card {
+    width: 190px;
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .homepage-header h1 {
+    font-size: 1.4rem;
+  }
+  .homepage-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .homepage-card {
+    width: 90%;
+    min-width: 230px;
+  }
+  .flip-card {
+    width: 90%;
+    min-width: 230px;
+  }
+}
