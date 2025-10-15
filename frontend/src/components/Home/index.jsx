@@ -4,6 +4,7 @@ import { BiSolidLogInCircle } from "react-icons/bi";
 import { BsGraphUpArrow } from "react-icons/bs";
 import { GrPersonalComputer } from "react-icons/gr";
 import MyCarousel from "../MyCrousel";
+import FeatureSection from "../Features";
 import './index.css'
 
 class Home extends Component{
@@ -50,6 +51,7 @@ class Home extends Component{
               <h1 className="enh">The heart of our Journey</h1>
                </div>
                <MyCarousel/>
+               <FeatureSection/>
             </>
         )
     }

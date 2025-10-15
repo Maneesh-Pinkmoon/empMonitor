@@ -17,7 +17,8 @@
   background: rgba(11, 128, 196, 0.9);
   border-radius: 16px;
   padding: 24px;
-  width: 320px;
+  width: 420px;
+  padding: 20px;
   color: white;
   font-family: "Poppins", sans-serif;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -26,7 +27,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-  margin-left: 60px;
+   height: auto;
 }
 }
 
@@ -42,8 +43,8 @@
     align-self: center;
 }
 .contact-form label {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 450;
 }
 
 .contact-form label span {
@@ -98,4 +99,50 @@
 
 .contact-form button:hover {
   background-color: #0066a0;
+}
+.error-message {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flag-box {
+  background-color: #f3f3f3;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.contact-form input,
+.contact-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact-form button {
+  background-color: #2b8fff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #1572d6;
+  transform: translateY(-2px);
 }

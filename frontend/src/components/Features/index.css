@@ -1,0 +1,124 @@
+/* Container */
+.feature-section {
+  background-color: white;
+  padding: 48px 24px;
+}
+
+/* Header */
+.headee {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.tag-1 {
+  display: inline-block;
+  background-color: #42a9e0;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.highlight {
+  color: #42a9e0;
+}
+
+.description {
+  color: #555555;
+  margin-top: 16px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media(min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* Left Column - Features */
+.features-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (max-width : 777px){
+  .features-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  order: 1;
+}
+}
+.feature-card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s;
+  font-weight: 500;
+  color: #333333;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Right Column - Image & Button */
+.image-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.image-container {
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+}
+
+.nt {
+  color: #ffffff;
+  background-color: #42a9e0;
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  margin-top: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.nt:hover {
+  background-color: #3691c3;
+}

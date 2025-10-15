@@ -1,163 +1,190 @@
-li{
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
   list-style-type: none;
+}
+
+/* Top Gitex Banner */
+#gitex {
+  width: 100%;
+  display: block;
+}
+
+/* HEADER */
+.header {
+  background-image: url("https://empmonitor.com/wp-content/uploads/2024/05/1-BG.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 20px 5%;
   color: #fff;
+  font-family: "Comfortaa", sans-serif;
 }
-@media screen and (min-width: 770px){
-  #gitex{
-    display: block;
-    width: 100vw;
-  }  
-  #burger{
-    display: none;
-  }
-  .main-head{
-    display: flex;
-    flex-direction: row;
-}
-.features{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.ftr-desk{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.navbar-co{
-  display: flex !important;
-  flex-direction: row;
-  margin-left: 30px;  
-}
-.nav-se{
+
+/* NAVBAR */
+.navbar-co {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width:901px){
+  .nav-mob {
+  display: flex;
+  align-items: center;
+}
+}
+@media screen and (max-width:900px){
+  .nav-mob {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;
+}
+}
+.logo {
+  width: 180px;
+  height: 60px;
+  margin-right: 40px;
+}
+
+#burger {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-se {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-se p {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav-se p:hover {
+  color: #40ffff;
+}
+
+.login-btn {
+  border-radius: 23px;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  height: 40px;
+  width: 120px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #28a1d9;
+}
+
+/* HERO SECTION */
+.main-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.mini-cont {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.header h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  color: #40ffff;
+  margin: 10px 0;
+}
+
+.fusion-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.fusion-title span {
+  color: #40ffff;
+}
+
+/* Features list */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-bottom: 20px;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  width: 200px;
+}
+
+.ft-co {
+  background-color: #28a1d9;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav-se p{
+
+.ft-img {
+  height: 60px;
+  width: auto;
+  margin: 20px 0;
+}
+
+.butn {
+  background-image: linear-gradient(90deg, #1f3c7a, #28a1d9);
+  border: none;
+  height: 42px;
+  width: 180px;
+  border-radius: 25px;
   color: #fff;
-  margin-right: 20px;
-  font: 15px Comfortaa;
+  font-family: Comfortaa;
   font-weight: 600;
-}
-.login-btn{
-border-radius: 5px;
-border: 2px solid #fff;
-color: #fff;
-height: 40px;
-width: 140px;
-font: 15px Comfortaa;
-border-radius: 23px;
-display: flex;
-align-items: center;
-justify-content: center;
-margin-right: 10px;
-}
-.mini-cont h1{
-line-height: -30px;
-}
-}
-@media screen and (max-width: 779px){
- #gitex{
-    display: none;
-} 
-.features{
-    display: flex;
-    flex-direction: column;
-} 
-.nav-se{
-  display: none;
-}
-#burger{
-    display: block;
-  }
-  .nav-mob{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.header{
-    background-image: url("https://empmonitor.com/wp-content/uploads/2024/05/1-BG.webp");
-    background-size: cover;
-    height: auto;
-    width: 100vw;
-    padding: 10px;
-}
-.logo{
-    width: 200px;
-    height: 60px;
-    margin-right: 90px;
-}
-.mini-cont{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.mini-cont p{
-    font-family: Comfortaa;
-    margin-left: 10px;
-    color: #fff;
-}
-.header h1{
-    font: 36px Poppins;
-    color: #40FFFF;
-}
-.fusion-title{
-    font: 15px Comfortaa;
-    margin: 10px;
-}
-.fusion-title span{
-    color: #40FFFF;
+.butn:hover {
+  transform: scale(1.05);
 }
 
-.features li{
-    list-style-type: none;
-    font: 11px Comfortaa;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 2px;
+.para {
+  margin-top: 8px;
+  font-size: 14px;
 }
-.ft{
-    align-self: center;
-}
-.ft-co{
-   background-color: #28A1D9;
-   height: 30px;
-   width: 30px;
-   border-radius: 20px;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
-   margin: 10px;
-}
-.ft-img{
-    height: 80px;
-    width: 300px;
-    margin: 20px;
-}
-.butn{
-    background-image: linear-gradient(#1f3c7a, #28A1D9);
-    border-width: 0px;
-    height: 40px;
-    width: 170px;
-    border-radius: 10px;
-    color: #fff;
-    font-family: Comfortaa;
-    cursor: pointer;
-}
-.para{
-    font-family: Comfortaa;
-    color: #fff;
-}
+
+/* CONTACT FORM STYLING */
 .form-container {
   background: rgba(11, 128, 196, 0.9);
   border-radius: 16px;
@@ -174,15 +201,6 @@ line-height: -30px;
   gap: 12px;
 }
 
-.contact-form label {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.contact-form label span {
-  color: #ff6b6b;
-}
-
 .contact-form input,
 .contact-form select {
   border: none;
@@ -191,28 +209,6 @@ line-height: -30px;
   font-size: 14px;
   outline: none;
   background-color: #eaf6ff;
-  color: #333;
-}
-
-.phone-input {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #eaf6ff;
-  border-radius: 8px;
-  padding: 6px 10px;
-}
-
-.flag-box {
-  font-size: 20px;
-}
-
-.phone-input input {
-  border: none;
-  outline: none;
-  flex: 1;
-  background: transparent;
-  font-size: 14px;
   color: #333;
 }
 
@@ -231,4 +227,94 @@ line-height: -30px;
 
 .contact-form button:hover {
   background-color: #0066a0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .nav-se {
+    display: none;
+  }
+
+  #burger {
+    display: block;
+  }
+
+  .main-head {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .features {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .fusion-title {
+    font-size: 14px;
+  }
+
+  .features li span {
+    font-size: 12px;
+  }
+
+  .butn {
+    width: 160px;
+    height: 38px;
+    font-size: 13px;
+  }
+}
+
+/* MOBILE NAV MENU - RIGHT TO LEFT TRANSITION */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background: rgba(0, 78, 124, 0.97);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobile-menu p {
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.mobile-menu p:hover {
+  color: #40ffff;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 1025px) {
+  .mobile-menu {
+    display: none;
+  }
 }

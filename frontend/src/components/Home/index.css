@@ -2,7 +2,7 @@
   .part-img{
     display: block;
     height: 70vh;
-    width:70vw;
+    width:80vw;
     display: none;
   }  
   .part-imgg{
@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     background-image: url("https://empmonitor.com/wp-content/uploads/2024/05/BG-1.webp");
+    margin-bottom: 10px;
 }
 .sec3-sub{
     display: flex;
@@ -26,9 +27,8 @@
 }
 .sec3-sub h1{
     font-size: 20px;
+    margin: 10px;
 }
-}
-
 .sec3-sub-cont{
     background-color: #A9E1F5;
     border-radius: 10px;
@@ -37,10 +37,17 @@
     justify-content: center;
     align-items: center;
     margin: 10px;
-    padding: 10px;
+    padding: 15px;
     height: 30vh;
-    width: 35vw;
+    width: 65vw;
 }
+.sec3-sub-cont p{
+    text-align: center;
+    margin-top: 10px;
+}
+}
+
+
 .sec3-sub-cont p{
    font: 15px Comfortaa;
    color: #4d6597;
@@ -58,7 +65,7 @@
 }
 @media screen and (min-width: 768px){
   .part-img{
-    height: 70vh;
+    height: 75vh;
     width:70vw;
     display: block;
     
@@ -74,6 +81,7 @@
     justify-content: center;
     align-items: center;
     background-image: url("https://empmonitor.com/wp-content/uploads/2024/05/BG-1.webp");
+    margin-bottom: 20px;
 }
 .sec3-sub{
     display: flex;
@@ -84,10 +92,30 @@
     font: 20px Comfortaa;
     width: 35vw;
     margin-left: 20px;
+      padding: 20px;
 
+}
+.sec3-sub h1{
+margin: 10px;
 }
 .sec3-sub1{
    font: 20px Comfortaa;
+}
+.sec3-sub-cont{
+    background-color: #A9E1F5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    height: 30vh;
+    width: 35vw;
+}
+.sec3-sub-cont p{
+    text-align: center;
+    margin-top: 10px;
 }
 }
 .section2{
@@ -95,6 +123,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
+    margin: 10px;
 }
 
 .ref{
@@ -104,15 +134,18 @@
     color: #fff;
     border-radius: 10px;
     font-weight: 800;
-    padding: 1px;
+    padding: 7px;
+    margin: 10px;
 }
 .section2 h1{
 font: 25px Comfortaa;
 font-weight: bold;
+margin: 10px;
 }
 .enh{
     font: 25px Comfortaa;
     font-weight: bold;
+    margin: 20px;
 }
 .enh-cont{
     display: flex;
@@ -127,5 +160,5 @@ font-weight: bold;
     color: #fff;
     border-radius: 10px;
     font-weight: 800;
-    padding: 1px;
+    padding: 5px;
 }

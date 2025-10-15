@@ -5,7 +5,6 @@ import { FiUserCheck } from "react-icons/fi";
 import { FaPlug, FaDatabase, FaBell, FaBuilding } from "react-icons/fa";
 import { FaCogs, FaChartBar, FaCodeBranch } from "react-icons/fa";
 
-// --- Reusable Dashboard Card Component ---
 class DashboardCard extends Component {
   render() {
     const { id, icon, tagline, description } = this.props;
@@ -21,7 +20,7 @@ class DashboardCard extends Component {
   }
 }
 
-// --- Reusable Flip Card Component ---
+
 class FlipCard extends Component {
   render() {
     const { icon, title, description } = this.props;
@@ -53,42 +52,42 @@ class FlipCard extends Component {
 const tailoredDashboardData = [
   {
     id: 1,
-    icon: <IoLogIn className="icon" />,
+    icon: <IoLogIn className="icon" size={40}/>,
     tagline: "Manager Login",
     description:
       "Empower managers with complete access to team data including detailed time and activity logs. Customize productivity labels effortlessly to optimize workflows.",
   },
   {
     id: 2,
-    icon: <FiUserCheck className="icon" />,
+    icon: <FiUserCheck className="icon" size={40}/>,
     tagline: "Employee Login",
     description:
       "Provide employees with comprehensive access to view their performance data and effortlessly apply for leave from the same dashboard.",
   },
   {
     id: 3,
-    icon: <FaPlug className="icon" />,
+    icon: <FaPlug className="icon" size={40}/>,
     tagline: "API Integration",
     description:
       "Seamlessly integrates with any software to bolster monitoring capabilities. Effortlessly track time spent on each application and categorize it as productive or neutral.",
   },
   {
     id: 4,
-    icon: <FaDatabase className="icon" />,
+    icon: <FaDatabase className="icon" size={40}/>,
     tagline: "Raw Data",
     description:
       "Access and analyze raw timesheet and productivity data for advanced insights.",
   },
   {
     id: 5,
-    icon: <FaBell className="icon" />,
+    icon: <FaBell className="icon" size={40}/>,
     tagline: "Custom Alerts",
     description:
       "Stay informed with customizable instant alerts related to productivity levels and activity logs.",
   },
   {
     id: 6,
-    icon: <FaBuilding className="icon" />,
+    icon: <FaBuilding className="icon" size={40}/>,
     tagline: "Employer Benefits",
     description:
       "Gain valuable workforce insights to streamline HR operations and boost efficiency.",
@@ -121,6 +120,7 @@ const flipCardData = [
 class TailoredDashboard extends Component {
   render() {
     return (
+      <>
       <div className="tailored-dash">
         {/* Header Section */}
         <div className="tail-header">
@@ -138,7 +138,7 @@ class TailoredDashboard extends Component {
             <DashboardCard key={item.id} {...item} />
           ))}
         </div>
-
+   </div>
         {/* Homepage Section */}
         <div className="homepage-root">
           <div className="homepage-header">
@@ -163,7 +163,7 @@ class TailoredDashboard extends Component {
             ))}
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

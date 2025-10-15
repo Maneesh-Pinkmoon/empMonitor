@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./index.css";
-import { FaFlag } from "react-icons/fa";
 
 class ContactForm extends Component {
   constructor(props) {
@@ -11,15 +10,41 @@ class ContactForm extends Component {
       email: "",
       employees: "",
       phone: "",
+      phoneError: "", // To hold phone validation error message
     };
   }
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      // Remove all non-digit characters
+      const numericValue = value.replace(/\D/g, "");
+
+      // Phone number validation
+      let phoneError = "";
+      if (numericValue.length > 10) {
+        phoneError = "Phone number cannot exceed 10 digits.";
+      } else if (numericValue.length < 10 && numericValue.length > 0) {
+        phoneError = "Phone number must be 10 digits long.";
+      }
+
+      this.setState({ phone: numericValue, phoneError });
+      return;
+    }
+
+    this.setState({ [name]: value });
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
+
+    // Extra validation before submit
+    if (this.state.phone.length !== 10) {
+      this.setState({ phoneError: "Phone number must be exactly 10 digits." });
+      return;
+    }
+
     console.log("Form Data:", this.state);
     alert("Form submitted!");
   };
@@ -84,21 +109,21 @@ class ContactForm extends Component {
             Mobile No. <span>*</span>
           </label>
           <div className="phone-input">
-            <div className="flag-box">
-              <span role="img" aria-label="India">
-                🇮🇳
-              </span>
-            </div>
             <input
               type="tel"
               name="phone"
-              placeholder="081234 56789"
+              placeholder="Enter 10-digit mobile number"
               value={this.state.phone}
               onChange={this.handleChange}
               required
             />
           </div>
-          <button>Submit</button>
+          {/* Error Message Display */}
+          {this.state.phoneError && (
+            <p className="error-message">{this.state.phoneError}</p>
+          )}
+
+          <button type="submit">Submit</button>
         </form>
       </div>
     );

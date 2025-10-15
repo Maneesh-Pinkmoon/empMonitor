@@ -2,6 +2,8 @@
   width: 90%;
   margin: auto;
   overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .car-img img,

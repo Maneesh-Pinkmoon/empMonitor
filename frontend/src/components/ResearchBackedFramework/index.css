@@ -123,3 +123,107 @@
     font-size: 22px;
   }
 }
+.empmonitor-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0b1635;
+  color: white;
+  padding: 60px 80px;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 100vw;
+}
+
+.empmonitor-content {
+  max-width: 480px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #2b3b7b;
+  color: #a8b5f7;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.highlight {
+  color: #40a9ff;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: #cbd3ea;
+  margin-bottom: 24px;
+}
+
+.link {
+  color: #5cb3ff;
+  cursor: pointer;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.sign-up-btn {
+  background-color: #2b8fff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sign-up-btn:hover {
+  background-color: #1572d6;
+  transform: translateY(-2px);
+}
+
+.empmonitor-image img {
+  width: 360px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  order: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .empmonitor-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .empmonitor-content {
+    max-width: 100%;
+  }
+
+  .empmonitor-image img {
+    width: 85%;
+   
+  }
+}
+@media screen and (min-width:901px){
+  .empmonitor-image{
+  order: 0;
+}
+.empmonitor-content{
+  order: 1;
+}
+}
+
+

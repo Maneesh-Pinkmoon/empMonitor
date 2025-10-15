@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #f8fbfd;
   font-family: Comfortaa;
+  padding: 20px;
 }
 h1{
     font-family: Comfortaa;
@@ -34,6 +35,8 @@ p{
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   justify-content: center;
+  margin-bottom: 10px;
+  width: 90vw;
 }
 
 .card {
@@ -45,6 +48,9 @@ p{
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  margin: 10px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .card:hover {
@@ -117,6 +123,7 @@ p{
   color: #fff;
   font-family: 'Segoe UI', Arial, sans-serif;
   padding: 36px 0;
+  width: 100vw;
 }
 
 .homepage-header {
@@ -174,6 +181,7 @@ p{
   align-items: center;
   transition: box-shadow 0.2s;
   position: relative;
+  margin-left: 10px;
 }
 
 .homepage-card:hover {
@@ -220,7 +228,7 @@ p{
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
-  min-height: 180px;
+  min-height: 280px;
   height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
@@ -237,6 +245,8 @@ p{
   background: #22305b;
   color: #d1e7ff;
   transform: rotateY(180deg);
+  height: auto;
+  padding: 5px;
 }
 .flip-card-desc {
   font-size: 0.99rem;
@@ -249,7 +259,7 @@ p{
   }
   .homepage-card {
     width: 190px;
-    min-height: 150px;
+    min-height: 180px;
     padding: 20px 10px;
   }
   .flip-card {

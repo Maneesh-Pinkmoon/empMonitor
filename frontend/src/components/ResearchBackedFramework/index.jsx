@@ -29,6 +29,7 @@ const frameworkData = [
 class ResearchBackedFramework extends Component {
   render() {
     return (
+      <>
       <div className="framework-section">
         <div className="framework-header">
           <span className="framework-tagline">
@@ -39,7 +40,6 @@ class ResearchBackedFramework extends Component {
             Empower Your Management Operations With Enterprise-Grade Convenience
           </p>
         </div>
-
         <div className="framework-cards">
           {frameworkData.map((item) => (
             <div key={item.id} className="framework-card">
@@ -51,6 +51,27 @@ class ResearchBackedFramework extends Component {
           ))}
         </div>
       </div>
+      <div className="empmonitor-section">
+        <div className="empmonitor-content">
+          <span className="badge">Build-In Transparency Mode</span>
+          <h2 className="title">
+            Discover Teams’ Best Abilities With{" "}
+            <span className="highlight">Detailed Analysis</span>
+          </h2>
+          <p className="subtitle">
+            Get a clear picture of your workforce with{" "}
+            <span className="link">EmpMonitor</span>
+          </p>
+          <button className="sign-up-btn">Sign Up Now!</button>
+        </div>
+        <div className="empmonitor-image">
+          <img
+            src="https://empmonitor.com/wp-content/uploads/2024/05/img-3.webp"
+            alt="EmpMonitor dashboard preview"
+          />
+        </div>
+      </div>
+</>
     );
   }
 }
