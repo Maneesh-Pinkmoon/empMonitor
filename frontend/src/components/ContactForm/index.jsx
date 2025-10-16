@@ -10,7 +10,7 @@ class ContactForm extends Component {
       email: "",
       employees: "",
       phone: "",
-      phoneError: "", // To hold phone validation error message
+      phoneError: "",
     };
   }
 
@@ -18,11 +18,9 @@ class ContactForm extends Component {
     const { name, value } = e.target;
 
     if (name === "phone") {
-      // Remove all non-digit characters
       const numericValue = value.replace(/\D/g, "");
-
-      // Phone number validation
       let phoneError = "";
+
       if (numericValue.length > 10) {
         phoneError = "Phone number cannot exceed 10 digits.";
       } else if (numericValue.length < 10 && numericValue.length > 0) {
@@ -38,8 +36,6 @@ class ContactForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
-    // Extra validation before submit
     if (this.state.phone.length !== 10) {
       this.setState({ phoneError: "Phone number must be exactly 10 digits." });
       return;
@@ -108,17 +104,15 @@ class ContactForm extends Component {
           <label>
             Mobile No. <span>*</span>
           </label>
-          <div className="phone-input">
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Enter 10-digit mobile number"
-              value={this.state.phone}
-              onChange={this.handleChange}
-              required
-            />
-          </div>
-          {/* Error Message Display */}
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Enter 10-digit mobile number"
+            value={this.state.phone}
+            onChange={this.handleChange}
+            required
+          />
+
           {this.state.phoneError && (
             <p className="error-message">{this.state.phoneError}</p>
           )}

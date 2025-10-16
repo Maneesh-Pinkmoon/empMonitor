@@ -3,7 +3,7 @@ import "./index.css";
 import { FaChartLine, FaCheck } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ContactForm from "../Contactform";
-
+import { FaInstagram } from "react-icons/fa6";
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -37,12 +37,6 @@ class Header extends Component {
 
     return (
       <>
-        <img
-          src="https://empmonitor.com/wp-content/uploads/2023/04/Emp-webp14x-scaled.webp"
-          id="gitex"
-          alt="Gitex Banner"
-        />
-
         <header className="header">
           {/* Navigation */}
           <nav className="navbar-co">
@@ -89,7 +83,7 @@ class Header extends Component {
           </nav>
 
           {/* Main Hero Section */}
-          <div className="main-head">
+          <div className="main-head common-padding">
             <div className="hero-content">
               <div className="mini-cont">
                 <FaChartLine color="#fff" />

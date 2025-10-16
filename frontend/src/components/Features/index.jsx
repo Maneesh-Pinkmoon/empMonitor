@@ -3,7 +3,7 @@ import './index.css';
 
 const FeatureSection = () => {
   return (
-    <div className="feature-section">
+    <div className="feature-section common-padding">
       {/* Header */}
       <div className="headee">
         <span className="tag-1">Our Product Suite</span>

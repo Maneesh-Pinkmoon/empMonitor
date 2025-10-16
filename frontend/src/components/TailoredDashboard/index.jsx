@@ -121,7 +121,7 @@ class TailoredDashboard extends Component {
   render() {
     return (
       <>
-      <div className="tailored-dash">
+      <div className="tailored-dash common-padding">
         {/* Header Section */}
         <div className="tail-header">
           <h1 className="tailored-head">Tailored Dashboard</h1>

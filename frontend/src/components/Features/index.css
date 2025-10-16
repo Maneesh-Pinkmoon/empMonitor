@@ -78,6 +78,7 @@
   transition: box-shadow 0.3s;
   font-weight: 500;
   color: #333333;
+  margin-left: 10px;
 }
 
 .feature-card:hover {

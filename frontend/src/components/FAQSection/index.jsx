@@ -50,7 +50,7 @@ class FAQSection extends Component {
     const { openIndex } = this.state;
 
     return (
-      <div className="faq-container">
+      <div className="faq-container common-padding">
         {/* Decorative background circles */}
         <div className="faq-bg-circle circle1"></div>
         <div className="faq-bg-circle circle2"></div>

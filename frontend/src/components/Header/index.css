@@ -134,16 +134,33 @@ li {
 .features {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 20px;
+  gap: 9px 20px;
   margin-bottom: 20px;
 }
-
+@media screen and (max-width:768px) {
+  .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 20px;
+  margin-bottom: 20px;
+  margin-left: -80px;
+}
 .features li {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-size: 11px;
   width: 200px;
+}
+}
+@media screen and (min-width:769px){
+  .features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  width: 170px;
+}
 }
 
 .ft-co {
@@ -230,7 +247,7 @@ li {
 }
 
 /* RESPONSIVE */
-@media (max-width: 1024px) {
+@media (max-width: 1021px) {
   .nav-se {
     display: none;
   }
